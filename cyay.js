@@ -36,14 +36,13 @@ function showView(viewId) {
 
 function openModal(productId) {
     currentProductId = productId;
-    document.getElementById('qty-modal').classList.remove('hidden');
+    document.getElementById('qty-modal').style.display = 'flex';
 }
 
 function closeModal() {
-    document.getElementById('qty-modal').classList.add('hidden');
+    document.getElementById('qty-modal').style.display = 'none';
     document.getElementById('qty-input').value = 1;
 }
-
 function confirmAddToCart() {
     const qtyInput = document.getElementById('qty-input');
     const qty = parseInt(qtyInput.value);
